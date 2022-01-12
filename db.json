@@ -1,0 +1,378 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "Leyla",
+      "surname": "Yaşar",
+      "email": "merkezdis@gmail.com",
+      "mobile": "5071621294",
+      "age": "26",
+      "sex": "Female",
+      "carrier": "Doctor",
+      "role": "Employee",
+      "graduation": "Graduate"
+    },
+    {
+      "id": "2",
+      "name": "Elif",
+      "surname": "Temiztürk",
+      "email": "merkezdis@gmail.com",
+      "mobile": "5071621294",
+      "age": "26",
+      "sex": "Female",
+      "carrier": "Doctor",
+      "role": "Employee",
+      "graduation": "Graduate"
+    },
+    {
+      "id": "3",
+      "name": "Muammer",
+      "surname": "Bey",
+      "email": "merkezdis@gmail.com",
+      "mobile": "5071621294",
+      "age": "43",
+      "sex": "Male",
+      "carrier": "Technician",
+      "role": "Admin",
+      "graduation": "Graduate"
+    },
+    {
+      "id": "4",
+      "name": "Meryem",
+      "surname": "vildan",
+      "email": "merkezdis@gmail.com",
+      "mobile": "5071621294",
+      "age": "21",
+      "sex": "Female",
+      "carrier": "Secretary",
+      "role": "Secretary",
+      "graduation": "Graduate"
+    },
+    {
+      "id": "5",
+      "name": "Şeyma",
+      "surname": "karahan",
+      "email": "merkezdis@gmail.com",
+      "mobile": "5071621294",
+      "age": "22",
+      "sex": "Female",
+      "carrier": "Assistant",
+      "role": "Employee",
+      "graduation": "Graduate"
+    },
+    {
+      "id": "6",
+      "name": "beyza",
+      "surname": "mavi",
+      "email": "merkezdis@gmail.com",
+      "mobile": "5071621294",
+      "age": "26",
+      "sex": "Male",
+      "carrier": "Assistant",
+      "role": "Employee",
+      "graduation": "Primary school"
+    },
+    {
+      "id": "7",
+      "name": "Ayse",
+      "surname": "Yasar",
+      "email": "ayseyasar@gmail.com",
+      "mobile": "5071621294",
+      "age": "24",
+      "sex": "Female",
+      "carrier": "Architect",
+      "role": "Employee",
+      "graduation": "Graduate",
+      "parentEmployeId": "1"
+    },
+    {
+      "id": "8",
+      "name": "Muhammed",
+      "surname": "Yasar",
+      "email": "merkezdis@gmail.com",
+      "mobile": "5071621294",
+      "age": "22",
+      "sex": "Male",
+      "carrier": "Doctor",
+      "role": "Employee",
+      "graduation": "Graduate",
+      "parentEmployeId": null
+    }
+  ],
+  "patients": [
+    {
+      "id": "1",
+      "name": "Yusuf",
+      "surname": "BOZKURT",
+      "age": "27",
+      "mobile": "05435568974",
+      "action": "Kanal",
+      "disease": "Şeker Hastası",
+      "status": "Waiting",
+      "doctorId": 1,
+      "note": ""
+    },
+    {
+      "id": "2",
+      "name": "Betül",
+      "surname": "YAŞAR",
+      "age": "27",
+      "mobile": "05435568974",
+      "action": "Dolgu",
+      "status": "complated",
+      "doctorId": 1,
+      "note": [
+        {
+          "type": "complated",
+          "text": "14-2 ye dolgu yapıldı"
+        },
+        {
+          "type": "waiting",
+          "text": "gelecek randevusu için 15-3 dolgu planlandı"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Hande",
+      "surname": "BALADIN",
+      "age": "22",
+      "mobile": "05435568974",
+      "action": "Kanal",
+      "status": "Waiting",
+      "doctorId": 2,
+      "note": [
+        {
+          "type": "warning",
+          "text": "milli takım voleybolcusu estetik yapılacak"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Burak",
+      "surname": "Deniz",
+      "age": "24",
+      "mobile": "05435568974",
+      "action": "Beyazlatma",
+      "disease": "Beyni Yok",
+      "status": "Complated",
+      "doctorId": 2,
+      "note": [
+        {
+          "type": "warning",
+          "text": "Hastanın beyni yok her an ısırabilir"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Ahmet",
+      "surname": "Kaya",
+      "age": "32",
+      "mobile": "05435568974",
+      "action": "estetik",
+      "status": "inprogress",
+      "doctorId": 2,
+      "note": [
+        {
+          "type": "waiting",
+          "text": "Mehdiye benzemek istiyor"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Mustafa ",
+      "surname": "Yaşar",
+      "age": "56",
+      "mobile": "05435568974",
+      "action": "dolgu",
+      "status": "waiting",
+      "doctorId": 1
+    },
+    {
+      "id": "7",
+      "name": "ayse",
+      "surname": "yasar",
+      "age": "24",
+      "mobile": "05071621294",
+      "action": "dolgu",
+      "disease": "",
+      "status": "waiting",
+      "doctorId": "1",
+      "note": "dolgu planlandı"
+    },
+    {
+      "id": "8",
+      "name": "zeynep",
+      "surname": "bel",
+      "age": "32",
+      "mobile": "05435568974",
+      "action": "estetik",
+      "status": "inprogress",
+      "doctorId": 2,
+      "note": [
+        {
+          "type": "waiting",
+          "text": "Mehdiye benzemek istiyor"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "mehmet",
+      "surname": "mehmet",
+      "age": "56",
+      "mobile": "05435568974",
+      "action": "dolgu",
+      "status": "waiting",
+      "doctorId": 1
+    },
+    {
+      "id": "10",
+      "name": "ayse",
+      "surname": "yasar",
+      "age": "24",
+      "mobile": "05071621294",
+      "action": "dolgu",
+      "disease": "",
+      "status": "waiting",
+      "doctorId": "1",
+      "note": "dolgu planlandı"
+    },
+    {
+      "id": "11",
+      "name": "Yusuf",
+      "surname": "BOZKURT",
+      "age": "27",
+      "mobile": "05435568974",
+      "action": "Kanal",
+      "disease": "Şeker Hastası",
+      "status": "Waiting",
+      "doctorId": 1,
+      "note": ""
+    },
+    {
+      "id": "12",
+      "name": "Betül",
+      "surname": "YAŞAR",
+      "age": "27",
+      "mobile": "05435568974",
+      "action": "Dolgu",
+      "status": "complated",
+      "doctorId": 1,
+      "note": [
+        {
+          "type": "complated",
+          "text": "14-2 ye dolgu yapıldı"
+        },
+        {
+          "type": "waiting",
+          "text": "gelecek randevusu için 15-3 dolgu planlandı"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Hande",
+      "surname": "BALADIN",
+      "age": "22",
+      "mobile": "05435568974",
+      "action": "Kanal",
+      "status": "Waiting",
+      "doctorId": 2,
+      "note": [
+        {
+          "type": "warning",
+          "text": "milli takım voleybolcusu estetik yapılacak"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Burak",
+      "surname": "bozkurt",
+      "age": "24",
+      "mobile": "05435568974",
+      "action": "Beyazlatma",
+      "disease": "Beyni Yok",
+      "status": "Complated",
+      "doctorId": 2,
+      "note": [
+        {
+          "type": "warning",
+          "text": "Hastanın beyni yok her an ısırabilir"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Polat",
+      "surname": "koçak",
+      "age": "32",
+      "mobile": "05435568974",
+      "action": "estetik",
+      "status": "inprogress",
+      "doctorId": 2,
+      "note": [
+        {
+          "type": "waiting",
+          "text": "Mehdiye benzemek istiyor"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Melih",
+      "surname": "konyalı",
+      "age": "56",
+      "mobile": "05435568974",
+      "action": "dolgu",
+      "status": "waiting",
+      "doctorId": 1
+    },
+    {
+      "id": "17",
+      "name": "ayse",
+      "surname": "yasar",
+      "age": "24",
+      "mobile": "05071621294",
+      "action": "dolgu",
+      "disease": "",
+      "status": "waiting",
+      "doctorId": "1",
+      "note": "dolgu planlandı"
+    },
+    {
+      "id": "18",
+      "name": "ömer",
+      "surname": "zeren",
+      "age": "32",
+      "mobile": "05435568974",
+      "action": "estetik",
+      "status": "inprogress",
+      "doctorId": 2,
+      "note": [
+        {
+          "type": "waiting",
+          "text": "Mehdiye benzemek istiyor"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "coşkun",
+      "surname": "kara",
+      "age": "56",
+      "mobile": "05435568974",
+      "action": "dolgu",
+      "status": "waiting",
+      "doctorId": 1
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

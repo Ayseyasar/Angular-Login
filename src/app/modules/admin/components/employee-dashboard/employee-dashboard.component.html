@@ -1,0 +1,133 @@
+<div class="background">
+    <nav id="fline">
+        <div class="navbar-brand">
+            <form class="form-inline md-form form-sm searchinput">
+                <i class="fas fa-search"></i>
+                <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+                    aria-label="Search" mdbInput>
+            </form>
+        </div>
+        <div class="navbar-nav ml-auto my-auto">
+            <button type="button" (click)="clickAddEmployee()" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                class="btn btn-sm btnadd">
+                <i class="fas fa-plus"></i>
+                Add Employee
+            </button>
+        </div>
+    </nav>
+
+    <div class="tbl-header">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Id Number</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Carrier</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telephone</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="tbl-content mb-2">
+        <tbody>
+            <table>
+                <tr *ngFor="let row of employeeData | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalLength }">
+                    <td>{{ row.id }}</td>
+                    <td class="capitalize">{{ row.name }}</td>
+                    <td class="uppercase">{{ row.surname }}</td>
+                    <td class="capitalize">{{ row.carrier }}</td>
+                    <td>{{ row.email }}</td>
+                    <td>{{ row.mobile }}</td>
+                    <td>
+                        <button type="button" (click)="onDetail(row); disableTxt();" title="Detail"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btnsame"><i
+                                class="fas fa-info-circle"></i></button>
+                        <button type="button" (click)="onEdit(row); undisableTxt();" title="Edit" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" class="btn btnsame mx-1"><i
+                                class="fas fa-user-edit"></i></button>
+                        <button (click)="deleteEmployee(row)" title="Delete" class="btn btnsame"><i
+                                class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+            </table>
+        </tbody>
+    </div>
+    <pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 *ngIf="showAdd" class="modal-title" id="exampleModalLabel">Add Employee</h5>
+                <h5 *ngIf="showUpdate" class="modal-title" id="exampleModalLabel">Update Employee</h5>
+                <h5 *ngIf="showDetail" class="modal-title" id="exampleModalLabel">Employee Detail</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <img src="https://icon-library.com/images/icon-profile/icon-profile-1.jpg">
+            <div class="modal-body">
+                <form [formGroup]="formValue">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Id Number</label>
+                        <input type="text" formControlName="id" class="form-control" id="exampleInputEmail1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">First Name</label>
+                        <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Last Name</label>
+                        <input type="text" formControlName="surname" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Email</label>
+                        <input type="text" formControlName="email" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Telephone</label>
+                        <input type="text" formControlName="mobile" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Age</label>
+                        <input type="text" formControlName="age" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Gender</label>
+                        <input type="text" formControlName="sex" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Carrier</label>
+                        <input type="text" formControlName="carrier" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Role</label>
+                        <input type="text" formControlName="role" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Graduation</label>
+                        <input type="text" formControlName="graduation" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Parent Employe Id</label>
+                        <input type="text" formControlName="parentEmployeId" class="form-control"
+                            id="exampleInputPassword1">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" *ngIf="showAdd" (click)="postEmployeeDetails()"
+                    class="btn btn-primary">Add</button>
+                <button type="button" *ngIf="showUpdate" (click)="updateEmployeeDetails()"
+                    class="btn btn-primary">Update</button>
+            </div>
+        </div>
+    </div>
+</div>

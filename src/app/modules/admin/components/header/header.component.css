@@ -1,0 +1,18 @@
+.navbar {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-family: 'Poppins',sans-serif;
+}
+
+#logout {
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#logout:hover {
+    background-color: #828c8d;
+}
